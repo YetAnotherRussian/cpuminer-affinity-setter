@@ -5,6 +5,7 @@
 	<!--
     CPUMiner Affinity Setter tool for generating correct affinity and priority parameters
     Copyright (C) 2016  Paul Hempshall (https://www.paulhempshall.com/io/cpuminer-affinity-setter/)
+	Copyright (C) 2018  Yet Another Russian (https://github.com/YetAnotherRussian)
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -83,13 +84,13 @@
 	<p>
 		This little tool should help you correctly configure the <em>--cpu-affinity</em> and <em>--cpu-priority</em> parameters for CPUMiner in Windows. 
 		<br>
-		<a href="https://github.com/phempshall/cpuminer-affinity-setter">[Github Repository]</a>
+		<a href="https://github.com/YetAnotherRussian/cpuminer-affinity-setter">[Active Github Repo]</a>
 	</p>
 
 	<form id="af_form">
 		<p>
 			<label for="af_cores">Number of logical CPUs:</label>
-			<select name="af_cores" id="af_cores">
+			<select name="af_cores" id="af_cores" style="cursor:pointer">
 				<option value="1">1</option>
 				<option value="2" class='bolden'>2</option>
 				<option value="3" class='bolden'>3</option>
@@ -164,7 +165,7 @@
 		</p>
 		<p>
 			<label for="af_priority">CPU Priority:</label>
-			<select name="af_priority" id="af_priority">
+			<select name="af_priority" id="af_priority" style="cursor:pointer">
 				<option value="5">Realtime*</option>
 				<option value="4">High</option>
 				<option value="3">Above Normal</option>
@@ -177,7 +178,7 @@
 			</small>
 		</p>
 		<p>
-			<input type="submit" value="Calculate...">
+		<input type="submit" value="Calculate..." style="cursor:pointer">
 		</p>
 	</form>
 
