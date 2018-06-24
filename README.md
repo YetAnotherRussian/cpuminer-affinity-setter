@@ -1,8 +1,8 @@
 # cpuminer-affinity-setter
 
-JavaScript tool for generating CPU affinity and priority parameters for CPUMiner.
+JavaScript tool for generating CPU affinity and priority parameters for CPU miners.
 
-This little tool should help you correctly configure the --cpu-affinity and --cpu-priority parameters for CPUMiner in Windows. 
+This little tool should help you correctly configure the --cpu-affinity and --cpu-priority parameters for CPU miners in Windows. 
 
 https://www.paulhempshall.com/io/cpuminer-affinity-setter/
 
