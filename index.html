@@ -82,7 +82,7 @@
 
 	<form id="af_form">
 		<p>
-			<label for="af_cores">Number of CPU cores:</label>
+			<label for="af_cores">Number of logical CPUs:</label>
 			<select name="af_cores" id="af_cores">
 				<option value="1">1</option>
 				<option value="2">2</option>
@@ -108,7 +108,7 @@
 				<option value="22">22</option>
 				<option value="23">23</option>
 				<option value="24">24</option>
-						<option value="25">25</option>
+				<option value="25">25</option>
 				<option value="26">26</option>
 				<option value="27">27</option>
 				<option value="28">28</option>
@@ -195,7 +195,7 @@
 
 				/* create header label and append to header */
 				label.htmlFor = inputID;
-				label.innerHTML = "Core " + parseInt(i+1);
+				label.innerHTML = "Core " + parseInt(i); //Core numbers start from 0
 				header_cell.appendChild(label);
 				header_row.appendChild(header_cell);
 
