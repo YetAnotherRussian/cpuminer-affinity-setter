@@ -184,8 +184,10 @@
 
 	<div id="af_results">
 		<h2>Results</h2>
-		Launch CPUMiner with the following parameters:
+		Launch CPU miner (e.g. <a href="https://github.com/JayDDee/cpuminer-opt/">cpuminer-opt</a> - miner <b>must</b> support affinity setting) with the following parameters:
 		<pre>--cpu-affinity <span id="af_affinity_result"></span> --cpu-priority <span id="af_priority_result"></span></pre>
+		Launch <b>any</b> Windows CLI app (e.g. any CLI miner or coin daemon - for direct mining in daemon) with the following parameters:
+		<pre>START /affinity 0x<span id="af_hex_affinity_result"></span> cmd /C "filename.exe -your_mining_params_here"</pre>
 		<p>
 			<small>
 				Donations:<br>
@@ -204,6 +206,7 @@
 				cores_table = document.getElementById('af_cores_table'),
 				results = document.getElementById('af_results'),
 				results_affinity = document.getElementById('af_affinity_result'),
+				results_hex_affinity = document.getElementById('af_hex_affinity_result'),
 				results_priority = document.getElementById('af_priority_result');
 
 		/* bind handlers */
@@ -267,9 +270,13 @@
 
 			/* convert binary to decimal */
 			decimal = parseInt(binary, 2);
+			
+			/* convert deciaml to hex uppercase */
+			hex = decimal.toString(16).toUpperCase();
 
 			/* display results */
 			results_affinity.innerHTML = decimal;
+			results_hex_affinity.innerHTML = hex;
 			results_priority.innerHTML = priority.value;
 			results.style.display = 'block';
 		} /* end submit() */
